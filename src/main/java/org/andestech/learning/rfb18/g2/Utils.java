@@ -23,6 +23,15 @@ public class Utils {
 
     }
 
+      public static void echo(String st, int N)
+      {
+          for(int i = 0; i<N; i++) System.out.print(st);
+          System.out.println();
+      }
 
+    public static void echo(String st)
+    {
+        echo(st,70);
+    }
 
 }

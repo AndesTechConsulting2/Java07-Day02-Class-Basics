@@ -23,7 +23,7 @@ public class App
 
         System.out.println("Number: " + Customer2.getCount());
 
-        System.out.println("--------------------------");
+        Utils.echo("-");
 
         new Customer2("Peter","First", 22, 200);
         new Customer2("Peter2","First", 22, 200);
@@ -31,6 +31,7 @@ public class App
 
         System.out.println("Number: " + Customer2.getCount());
 
+        Utils.echo("*",90);
 
         int min=-1000, max=1000;
         for(int i=0; i<15; i++)
