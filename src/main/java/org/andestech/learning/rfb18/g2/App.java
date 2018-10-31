@@ -20,6 +20,13 @@ public class App
         Customer2 customer3 = new Customer2("Basil","Basil", 21);
         System.out.println(customer3.getCustomerInfo());
 
+        System.out.println("Number: " + Customer2.getCount());
+
+        new Customer2("Peter","First", 22, 200);
+        new Customer2("Peter2","First", 22, 200);
+        new Customer2("Peter3","First", 22, 200);
+
+        System.out.println("Number: " + Customer2.getCount());
 
     }
 }

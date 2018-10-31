@@ -22,6 +22,7 @@ public class Customer2 {
         this.age = age;
         this.ballance = ballance;
         id = new Random().nextInt(1000000);
+        count++;
     }
 
    private String name;
@@ -29,6 +30,8 @@ public class Customer2 {
    private int age;
    private double ballance;
    private int id;
+
+   private static int count = 0;
 
    public int getId(){
        return id;
@@ -46,6 +49,8 @@ public class Customer2 {
                + ", ballance: " + getBallance();
 
    }
+
+   public static int getCount(){return count;}
 
     public String getName() {
         return name;
@@ -75,7 +80,32 @@ public class Customer2 {
         return ballance;
     }
 
-    public void setBallance(double ballance) {
-        this.ballance = ballance;
+    /*public void setBallance(double ballance) {
+       double old_ballance = this.ballance;
+       this.ballance = ballance;
+       if(!isBallanceValid()) this.ballance = old_ballance;
+
     }
+
+    private boolean isBallanceValid(){
+
+       if(ballance >= AccountData.MAX_CUSTOMER_CAT2_BALLANCE) return false;
+       return true;
+
+      // new AccountData().MAX_CUSTOMER_CAT3_BALLANCE
+   }*/
+
+    public void setBallance(double ballance) {
+        if(isBallanceValid(ballance)) this.ballance = ballance;
+
+    }
+
+    private static boolean isBallanceValid(double bal){
+
+        if(bal>= AccountData.MAX_CUSTOMER_CAT2_BALLANCE) return false;
+        return true;
+
+        // new AccountData().MAX_CUSTOMER_CAT3_BALLANCE
+    }
+
 }
