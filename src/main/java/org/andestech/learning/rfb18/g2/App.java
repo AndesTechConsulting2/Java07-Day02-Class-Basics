@@ -1,9 +1,10 @@
 package org.andestech.learning.rfb18.g2;
 
+import java.util.Random;
+
 public class App
 {
-    public static void main( String[] args )
-    {
+    public static void main( String[] args ) throws InterruptedException {
 
         Customer customer1 = new Customer();
         customer1.name="Basil";
@@ -28,5 +29,14 @@ public class App
 
         System.out.println("Number: " + Customer2.getCount());
 
+
+        int min=-1000, max=1000;
+        for(int i=0; i<15; i++)
+        {
+            Thread.sleep(2);
+            System.out.println(Utils.getRandom2(min,max) + " --- " +
+            new Random().nextDouble());
+
+        }
     }
 }
