@@ -23,6 +23,8 @@ public class App
 
         System.out.println("Number: " + Customer2.getCount());
 
+        System.out.println("--------------------------");
+
         new Customer2("Peter","First", 22, 200);
         new Customer2("Peter2","First", 22, 200);
         new Customer2("Peter3","First", 22, 200);
@@ -36,6 +38,8 @@ public class App
             Thread.sleep(2);
             System.out.println(Utils.getRandom2(min,max) + " --- " +
             new Random().nextDouble());
+
+
 
         }
     }
