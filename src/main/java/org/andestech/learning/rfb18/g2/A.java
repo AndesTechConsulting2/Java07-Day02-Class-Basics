@@ -1,5 +1,8 @@
 package org.andestech.learning.rfb18.g2;
 
+
+import java.lang.*;
+
 public class A {
     C c1;
     A prev, next;
