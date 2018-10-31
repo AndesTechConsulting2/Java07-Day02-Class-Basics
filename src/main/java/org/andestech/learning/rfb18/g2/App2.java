@@ -22,9 +22,20 @@ public class App2
 
         B.test(1.2345);
 
-        B.test(1.7777, "iuyi");
+        B.test(1.7777, String.valueOf(11));
+        B.test(1.7777, ""+11);
+
+        System.out.println(b1.aType.data);
 
 
+        A a3 = new A(); a3.data="Salute!";
+
+        B b3 = new B(a3);
+
+        System.out.println(b3.aType.data);
+        System.out.println(b3.aType.c1.valC);
+
+        //c1.qqq.ddd.ff.meth1(1,2,3)
 
        }
 }

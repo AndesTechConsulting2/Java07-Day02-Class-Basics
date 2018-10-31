@@ -2,17 +2,28 @@ package org.andestech.learning.rfb18.g2;
 
 public class B {
 
+    A aType;
+
     static
     {
 
         System.out.println("++ static ctor +++");
         a = 837987;
         MONTH = 10;
+
     }
 
     public B(){
         System.out.println("++ ctor: " + this);
+        aType = new A();
+        aType.data="Салют!";
     }
+
+    public B(A aType){
+        System.out.println("++ ctor: " + this);
+        this.aType = aType;
+    }
+
 
     public static int a;
     //public static final int MONTH = 10;
